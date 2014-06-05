@@ -37,5 +37,7 @@ func (mux *ServeMux) ServeAWP(c *CommandRequest, s *StatusResponse) {
 		h(c, s)
 	} else {
 		// Bad Method/404
+		s.Code = 404
+		s.Status = "Unrecognised command"
 	}
 }
