@@ -57,9 +57,6 @@ func (s *Server) serve(conn net.Conn) {
 		}
 		s.mux.ServeAWP(cr, sr)
 
-		fmt.Printf("Verb: %s\n\tHeaders: %s\n\n", cr.Method, cr.Headers)
-		fmt.Printf("Status Response: %s %s\n\n", sr.Code, sr.Status)
-
 		c.PrintfLine("%d %s\r\n", sr.Code, sr.Status)
 
 	}
