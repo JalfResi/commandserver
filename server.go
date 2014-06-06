@@ -1,7 +1,6 @@
 package commandserver
 
 import (
-	"fmt"
 	"log"
 	"net"
 	"net/textproto"
